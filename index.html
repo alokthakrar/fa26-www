@@ -1,0 +1,2655 @@
+<!DOCTYPE html>
+<html xmlns="https://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174929475-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-174929475-2');
+    </script>
+    <link rel="icon" href="img/EECS16AOfficialLogo.png" type="image/png">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="http://eecs.berkeley.edu/favicon.ico" type="image/x-icon">
+    <link href="bootstrap-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <title>EECS16A: Foundations of Signals, Dynamical Systems, and Information Processing, Fall 2026</title>
+  </head>
+
+  <body data-spy="scroll" data-target="#navscroll" onload="getCurrFont()">
+
+    <div id="navscroll">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="." style="color: #000; display: flex; align-items: center;">
+                <strong>EECS16A</strong> | Fall 2026
+                <img src="img/EECS16AOfficialLogo.png" alt="Logo" style="height:35px; margin-left:5px;">
+            </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" >
+              <ul class="nav navbar-nav pull-right">
+                <li><a id="na1" href="#schedule">Schedule</a></li>
+                <li><a id="na1" href="#notes">Notes</a></li>
+                <li><a id="na1" href="#google-calendar">Calendar</a></li>
+                <li><a id="na1" href="#colored-calendar">Discussions</a></li>
+                <li><a id="na5" href="#resources">Resources</a></li>
+                <li><a id="na5" href="#exams">Past Exams</a></li>
+                <!-- <li><a id="na5" href="#sims">Past Demos</a></li> -->
+                <!-- <li><a id="na5" href="#practiceSets">Practice Sets</a></li> -->
+<!--               <li><a id="na5" href="#csm">CSM</a></li>-->
+                <li><a id="na4" href="#staff">Staff</a></li>
+                <li class="dropdown">
+                  <a href="policies.html" class="dropbtn">Policies</a>
+                  <div class="dropdown-content">
+                    <a href="policies.html#courseInfo">Course Info</a>
+                    <a href="policies.html#gradeBreak">Grade Breakdown</a>
+                    <a href="policies.html#gradeScale">Grading Scale</a>
+                    <a href="policies.html#secondChance">Exam Clobber Policy</a>
+                    <a href="policies.html#hwPartyOH">Homework Party and OH</a>
+                    <a href="policies.html#hwSgSubmission">Homework and Self-Grade Submission</a>
+                    <a href="policies.html#sgWalkthrough">Self-Grading Walkthrough Video</a>
+                    <a href="policies.html#readerGrades">Reader Grades</a>
+                    <a href="policies.html#hwEffort">Homework Effort</a>
+                    <a href="policies.html#hwScoring">Homework Scoring</a>
+                    <a href="policies.html#participation">Participation in Discussion</a>
+                    <a href="policies.html#labDiscussion">Lab Policies</a>
+                    <a href="policies.html#exampolicy">Exam Policies</a>
+                    <a href="policies.html#exceptions">Exceptions and Exam Accomodation</a>
+                    <a href="policies.html#communication">Course Communication</a>
+                    <a href="policies.html#collaboration">Collaboration</a>
+                    <a href="policies.html#studyGroups">16A Study Groups</a>
+                    <a href="policies.html#help">Asking for Help</a>
+                    <a href="policies.html#health">Health</a>
+                    <a href="policies.html#inclusion">Inclusion</a>
+                    <a href="policies.html#honor">Honor</a>
+                    <a href="policies.html#otherresources">Resources</a>
+                    <a href="policies.html#advice">Advice</a>
+                  </div>
+                </li>
+                <li class="dropdown">
+                  <a class="dropbtn">Links</a>
+                  <div class="dropdown-content">
+                    <a target="_blank" href="https://edstem.org/us/courses/94600/discussion">Ed</a>
+                    <a target="_blank" href="https://oh.eecs16a.org">OH Queue</a>
+                    <a target="_blank" href="https://www.gradescope.com/courses/1235369">Gradescope</a>
+                    <!-- <a target="_blank" href="">Textbook</a> -->
+<!--                    <a target="_blank" href="">Lab Checkoff</a>-->
+<!--                    <a target="_blank" href=">Discussion Attendance</a>-->
+<!--                    <a target="_blank" href="">Accommodations and Exceptions</a>-->
+<!--                    <a target="_blank" href="">Status Check</a>-->
+
+
+
+                  </div>
+                </li>
+
+                <!-- <li><a id="na6" href="#about">About</a></li> -->
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div style="height: 40px;"></div>
+    <div class="parallax-window" data-parallax="scroll"
+         data-image-src="img/background2.jpg" data-speed="0.1"
+         role="presentation" aria-hidden="true">
+    </div>    <div class='container'>
+      <div class="main-container">
+
+<script>
+function getCurrFont() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.getItem('fontFamily')) {
+      document.body.style.fontFamily = localStorage.getItem("fontFamily");
+    }
+    else {
+      localStorage.setItem("fontFamily", "Raleway");
+      document.body.style.fontFamily = localStorage.getItem("fontFamily")
+    }
+  }
+}
+</script>
+<style>
+  .easter-egg-temp,
+  .easter-egg-temp:hover,
+  .easter-egg-temp:focus,
+  .easter-egg-temp:active,
+  .easter-egg-temp:visited {
+    position: fixed;        /* pinned to viewport */
+    bottom: 20px;
+    right: 20px;
+    background: transparent;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 5px;         /* near-zero */
+    font-weight: normal;
+    line-height: 5px;
+    width: auto;
+    height: auto;
+    z-index: 99999;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    cursor: default;
+  }
+</style>
+
+<a href="https://www.linkedin.com/in/leon-kornfeld-398595251/" class="easter-egg-temp">
+  EASTER EGG
+</a><!-- Maintained by Berkeley's ee16a staff-->
+
+<div class='row'>
+  <h1><b>EECS16A</b>, Foundations of Signals, Dynamical Systems, and Information Processing</h1>
+  <h3>Fall 2026</h3>
+</div>
+
+<!--<h2>Progress Tracker</h2>
+<a class="anchor" id="progressTracker"></a>
+<p> To help you stay on track in this course, we have designed <b> an optional 16A Progress Tracker </b>, which maps out all the semester's required course assignments. It is completely self-guided, and we hope it helps you keep track of your progress in 16A! <b> To make a personal copy of the Fall 2020 16A Progress Tracker, click <a rel="noopener noreferrer" target="_blank" href="https://docs.google.com/spreadsheets/d/12ds9-_n9sj9SxSlfff2J4hWhndB-U2M46NQx1JzItPw/copy">here</a> </b>. </p>-->
+<style>
+div.indentlarge {
+  text-indent: 270px;
+}
+div.indentsmall {
+  text-indent: 25px;
+}
+#snackbar1, #snackbar2 {
+  visibility: hidden;
+  min-width: 150px;
+  margin-left: -125px;
+  background-color: #046f7d;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 8px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 14px;
+}
+
+#snackbar1.show, #snackbar2.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+
+
+/* New styles for the content wrapper */
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the content */
+}
+</style>
+<!-- Wrap the content in a div with the new class -->
+<div class="content-wrapper">
+  <div class="text-content">
+    <h2>Important Course Information/Scheduling Updates</h2>
+    <a class="anchor" id="updates"></a>
+    <!-- <p>Lecture is every <b>Monday</b> and <b>Wednesday</b> from <b>6:30 - 8:00 pm</b> in <b>Pimentel 1.</b></p>
+    <b style="color: red;">If you are a dual enrollment student, or you believe you weren't properly enrolled in the course, please reach out to eecs16a@berkeley.edu so that you can be added to bCourses.</b></p>
+    <b style="color: blue;">If you aren't enrolled in the Gradescope, please join with the following code: 6KWXP7</b></p> -->
+
+
+    <!-- <p><b>Please find the OH schedule under the <a href="https://eecs16a.org/#google-calendar">calendars section</a></b></p> -->
+
+  </div>
+  <div class="image-content">
+    <img src="img/EECS16AOfficialLogo.png" alt="Logo" style="height:150px;">
+  </div>
+</div>
+
+<div id="snackbar1">copied password to clipboard!</div>
+<div id="snackbar2">changed site font!</div>
+
+
+
+<script>
+function fontChange(f) {
+	if (typeof(Storage) !== "undefined") {
+    var prev = localStorage.getItem("fontFamily");
+	  localStorage.setItem("fontFamily", f);
+	  document.body.style.fontFamily = localStorage.getItem("fontFamily");
+    showFontChange(f, prev);
+	}
+}
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+
+  showCopied();
+}
+
+function showCopied() {
+  var x = document.getElementById("snackbar1");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function showFontChange(f, prev) {
+  var x = document.getElementById("snackbar2");
+  if (prev == f) {
+    x.innerHTML = "site font is already ".concat(prev).concat("!");
+  }
+  else {
+    x.innerHTML = "changed site font to: ".concat(f).concat("!");
+  }
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+
+
+
+
+
+
+
+
+<!-- <p><b> 05/15/22: </b>Congrats on completing another semester! Final Solutions have been uploaded and can be found <a href="student-resources/exams/sp22_final_sol.pdf" target="_blank">here</a></p> -->
+
+<!-- <p> <font color="purple"> <b> 03/08/22: </b> </font> Midterm 1 PDF Solutions have been uploaded and can be found <a href="student-resources/exams/sp22_mt1_sol.pdf">here</a></p> -->
+
+<!-- <p> <font color="purple"> <b> 11/13/2021: </b> </font> <a href="https://drive.google.com/file/d/12Yffk_ztilaAuuos-tF5ZPe9ZhRVb0BI/view?usp=sharing">Miterm 2 Review Session Recording</a> can be found here</p>
+
+<p> <font color="purple"> <b> 11/14/2021: </b> </font> <b> Congrats to 16A course staff for besting our 16B counterparts 2-0 in a game of capture the flag!! </b>  </p> -->
+
+<!-- <p> <font color="purple"> <b> 12/09/2021: </b> </font> <b> Final Review Session Module 1 and 3 <a href="https://youtu.be/5ma1iRII83k">recording</a> and <a href="student-resources/exams/fa21_final_review_slides_mod3.pdf"> mod 3 slides</a> and <a href="https://docs.google.com/presentation/d/1fTWotBh10PHP_mm28NEpkQY4hVW9jf4LtzWAkZrxx-k/edit#slide=id.p">mod 1 slides</a> </b>. -->
+
+<!-- <p> <font color="purple"> <b> 3/2/2021: </b> </font> <b> CSM Materials are now available on the site! </b> Click <a href="#csm">here</a> to see a list of the materials that have been released by CSM so far, and a quick overview of the topics that each worksheet covers. </p> -->
+
+<!-- <p> <b> If there are any special events to note, or deviations from the schedule as listed below, they'll be noted here! </b> </p>
+
+<p> <font color="purple"> <b> 7/4/2024: </b> </font> <b> <font color="red">Midterm Review files have been added in the calendar, in the leftmost column of week 2.</b>. </font> </p>
+
+
+<p> <font color="grey"> <b> 6/21/2024: </b> <b> Final Exam Time and location has been updated in the syllabus and calendar. For quick reference, it is on Wednesday, 8/7, 6-9PM in Evans 60</b>. </font></p> -->
+
+<!--<p> <font color="purple"> <b> 12/9/2020: </b> </font> <b> Discussion Checkoff Solutions have been released! </b> See either the <a href="https://piazza.com/class/ke3aj8z75apb0?cid=2018"> associated Piazza post </a> or the identical <a href="https://eecs16a.org/student-resources/fa20_disc_checkoff_sols.pdf"> compiled PDF document </a>. </p>-->
+
+<!--<p> <font color="purple"> <b> 10/5/2020: </b> </font> <b> All information about the (completely optional) Practice Sets has been moved <a href="#practiceSets">here</a> to avoid confusion with the required HW.</b> Good luck on today's midterm! </p>-->
+
+<!--<p> <font color="purple"> <b> 9/29/2020: </b> </font> <b> CSM Materials are now available on the site! </b> Click <a href="#csm">here</a> to see a list of the materials that have been released by CSM so far, and a quick overview of the topics that each worksheet covers. We hope this helps with midterm preparation for next Monday! </p>-->
+
+<!--<p> <font color="purple"> <b> 9/1/2020: </b> </font> <b> Discussion checkoff-->
+<!--  links will be released weekly, starting today!-->
+<!--  </b> All links can be found in the <a href="#schedule">schedule</a>-->
+<!--  below, and the most recent link will also be kept here for convenience.-->
+
+<!--<div class="indentsmall">-->
+<!--	<p> <a href="https://forms.gle/X3fVU45ZVV5pQuxS7" target="_blank">-->
+<!--  Checkoff Link 14A/14B </a> </p>-->
+<!--</div>-->
+
+<!--<p> <font color="purple"> <b> 8/31/2020: </b> </font> <b> The first discussion sections are today! </b> The meeting links for each section now and going forward can be found in the <a href="#google-calendar">google calendar</a>, <a href="https://piazza.com/class/ke3aj8z75apb0">Piazza</a>, or hyperlinked in the <a href="#colored-calendar">table</a>. Please note that the <b> password for any cloud recordings </b> for discussion (which will be added <a href="#schedule">below</a> at the end of each M/W) will be <b><span style="display:inline" id="p2">eecs16a!</span></b> <input type="button" style="background-color: #dceef5; border-radius:20px" value="copy cloud-recording password!" onclick = "copyToClipboard('#p2')">. </p>-->
+
+<!--<p> <font color="purple"> <b> 8/29/2020: </b> </font> <b> 16A Study Group Formation: </b> Please see the additional section added to the policies about Study Groups <a href="policies.html#studyGroups">here</a>. </p>-->
+
+<!--<p> <font color="purple"> <b> 8/26/2020: </b> </font> <b> Lecture information: </b> Lecture will be held through a Zoom livestream. This will be recorded and linked below as soon as possible each Tuesday and Thursday. The password for lecture (and other) meeting links is <b><span style="display:inline" id="p1">16a</span></b> <input type="button" style="background-color: #dceef5; border-radius:20px" value="copy meeting password!" onclick = "copyToClipboard('#p1')">.-->
+
+<!--<div class="indentsmall">-->
+<!--  <p> Lectures: T/Th 12:30-2:00 PM PST, <a href="https://berkeley.zoom.us/j/92494938293 " target="_blank"> Lecture Zoom Link </a>-->
+<!--</div>-->
+
+<!--<p> <font color="purple"> <b> 8/26/2020: </b> </font> <b> The Discussion Schedule has been released <a href="https://eecs16a.org/#colored-calendar"> below </a> </b>. Please be sure to see the table and <i>also</i> the important information under it. There are sections at a wide range of times, with different emphases and styles; feel free to check out several and see which works best for you. Also, for many popular time slots, there are multiple sections at the same time to offer choices. </p>-->
+
+<!-- <p> <font color="purple"> <b> 7/11/2020: </b> </font> <b> The EECS16A Status Check has been released! </b> You can visit <a href="https://status.eecs16a.org/" target="_blank">this link</a> to see a summary of your scores in the class so far (at least, those which have been graded and processed). There will be a delay between when assignments are due or when they're graded to when they're put on the Status Check. A summary of the assignments that have been released is below, and <a href="https://piazza.com/class/kazyttw5d622vq?cid=160" target="_blank">this associated piazza post </a> has more detail. If you spot an error, submit a ticket <a href="https://forms.gle/rf481Ja9ZNT87kRZ8" target="_blank">here</a>. </p>
+
+<table align="center" border="1" class="table table-responsive table-bordered table-striped table-condensed" style="width: 100%;">
+<thead>
+<tr style="background: #91c8d9">
+  <th class = "center" border = "5"> Exams </th>
+  <th class = "center" border = "5"> Homework (all) </th>
+  <th class = "center" border = "5"> Labs (all) </th>
+  <th class = "center" border = "5"> Participation (all) </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="center" style="background: #d8f2e6">
+	Midterm 1 <br>
+  Midterm 2 <br>
+  </td>
+  <td class="center" style="background: #d5e8f2">
+	0A, 0B, 1A, 1B <br>
+  2A, 2B, 3A, 3B <br>
+  4A, 4B, 5A, 5B <br>
+  6A, 6B, 7A <br>
+  </td>
+  <td class="center" style="background: #d9d3f2">
+	Imaging I, II, III <br>
+  Touchscreen I, II, III <br>
+  APS I, II <br>
+  </td>
+  <td class="center"  style="background: #f2d8e1">
+	Checkoffs 1 to 16 (all of them!) <br>
+  </td>
+</tr>
+</tbody>
+</table>
+
+<p> <font color="purple"> <b> 7/5/2020 + 7/16/2020: </b> </font> <b> Discussion Checkoff Solutions are mapped to their respective Piazza Post below. </b>
+
+<table align="center" border="1" class="table table-responsive table-bordered table-striped table-condensed" style="width: 35%;">
+<thead>
+<tr style="background: #91c8d9">
+  <th class = "center" border = "5"> Week # </th>
+  <th class = "center" border = "5"> Checkoffs </th>
+  <th class = "center" border = "5"> Post Link(s) </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Weeks 0 + 1 </td>
+  <td class="center" style="background: #d9d3f2"> 1, 2, 3, 4 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=101" target="_blank">@101 </a> </td>
+</tr>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Week 2 </td>
+  <td class="center" style="background: #d9d3f2"> 5, 6 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=128" target="_blank">@128</a> </td>
+</tr>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Week 3 </td>
+  <td class="center" style="background: #d9d3f2"> 7, 8 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=196" target="_blank">@196</a>, <a href="https://piazza.com/class/kazyttw5d622vq?cid=204" target="_blank">@204</a> </td>
+</tr>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Week 4 </td>
+  <td class="center" style="background: #d9d3f2"> 9, 10 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=239" target="_blank">@239</a>, <a href="https://piazza.com/class/kazyttw5d622vq?cid=242" target="_blank">@242</a> </td>
+</tr>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Week 5 </td>
+  <td class="center" style="background: #d9d3f2"> 11, 12 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=289" target="_blank">@289</a></td>
+</tr>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Week 6 </td>
+  <td class="center" style="background: #d9d3f2"> 13, 14 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=351" target="_blank">@351</a></td>
+</tr>
+<tr>
+  <td class="center" style="background: #d8f2e6"> Week 7 </td>
+  <td class="center" style="background: #d9d3f2"> 15 </td>
+  <td class="center" style="background: #f2d8e1"> <a href="https://piazza.com/class/kazyttw5d622vq?cid=390" target="_blank">@390</a></td>
+</tr>
+</tbody>
+</table>
+</p> -->
+
+<!-- <p> <font color="purple"> <b> 6/23/2020: </b> </font> <b> Discussion checkoffs begin today! </b> All links can be found in the schedule below, and the most recent link will also be kept here for convenience.
+
+<div class="indentsmall">
+	<p> <a href="https://docs.google.com/forms/d/e/1FAIpQLSdXRy5s9ES92e1KZrhmWxG_zdaQxdfDHV8RVgxbghJXNFgPfA/viewform" target="_blank"> Checkoff Link (16 of 16) </a> </p>
+</div> -->
+
+<!-- <p> <font color="purple"> <b> 6/21/2020: </b> </font> <b> Lecture information: </b> Lecture will be held through a Zoom livestream. This will be recorded and linked below as soon as possible each Monday, Tuesday, Wednesday, and Thursday. The password for lecture (and discussion) recordings is <span style="display:inline" id="p1"> eecs16a! </span> <input type="button" style="background-color: #dceef5; border-radius:20px" value="click to copy password!" onclick = "copyToClipboard('#p1')">
+
+<div class="indentsmall">
+	<p> Lectures: MTuWTh 9:30-11:00 AM PST, <a href="https://berkeley.zoom.us/j/93838650239" target="_blank"> Lecture Zoom Link </a>, Phone: +1 669 900 6833, Meeting ID: 938 3865 0239 </p>
+</div> --><div class='row'>
+  <a class="anchor" id="schedule"></a>
+  <h2>Schedule</h2>
+  <p> <b>Lecture videos can be found in the bCourses Media Gallery page</a></b></p>
+<!--   <p> <b> Note: </b> The password for Zoom cloud recordings for the single remote discussion will be <b><span style="display:inline" id="p2">eecs16a!</span></b> <input type="button" style="background-color: #dceef5; border-radius:20px" value="copy cloud-recording password!" onclick = "copyToClipboard('#p2')">. </p> -->
+  <p> (Please scroll horizontally if you're viewing this on your phone.) </p>
+<!--  <p> For the (optional) Practice Sets, see <a href="#practiceSets">here</a>. </p>-->
+  <div class="table-responsive">
+    <table border="3", class="table table-bordered table-striped-sched table-hover-sched" role="presentation">
+      <thead>
+        <tr>
+          <th style="background: #91c8d9", class='col-md-1 center'><b>Week</b></th>
+          <th style="background: #91c8d9", class='col-md-1 center'><b>Date</b></th>
+          <th style="background: #91c8d9", class='col-md-4 center'><b>Lecture Topic</b></th>
+          <th style="background: #91c8d9", class='col-md-2 center'><b>Discussion</b></th>
+          <th style="background: #91c8d9", class='col-md-2 center'><b>Lab</b></th>
+          <th style="background: #91c8d9", class='col-md-2 center'><b>Homework</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="1" class="center">
+            0
+            <br/>          </td>
+          <td class="center date-hl">
+            08/26 We
+          </td>
+          <td>
+            Vectors & Signals
+          </td>
+          <td class="center">
+                0B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="1" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="1" class="center">
+                Homework 0<br/>
+                  (<i>Due 08/28 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            1
+            <br/>          </td>
+          <td class="center date-hl">
+            08/31 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                1A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 1<br/>
+                  (<i>Due 09/04 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            09/02 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                1B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="1" class="center">
+            2
+            <br/>          </td>
+          <td class="center date-hl">
+            09/09 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                2B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="1" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="1" class="center">
+                Homework 2<br/>
+                  (<i>Due 09/11 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            3
+            <br/>          </td>
+          <td class="center date-hl">
+            09/14 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                3A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 3<br/>
+                  (<i>Due 09/18 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            09/16 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                3B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            4
+            <br/>          </td>
+          <td class="center date-hl">
+            09/21 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                4A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 4<br/>
+                  (<i>Due 09/25 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            09/23 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                4B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            5
+            <br/>          </td>
+          <td class="center date-hl">
+            09/28 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                5A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 5<br/>
+                  (<i>Due 10/02 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            09/30 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                5B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            6
+            <br/>          </td>
+          <td class="center date-hl">
+            10/05 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                6A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 6<br/>
+                  (<i>Due 10/09 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            10/07 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                6B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            7
+            <br/>          </td>
+          <td class="center date-hl">
+            10/12 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                7A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 7<br/>
+                  (<i>Due 10/16 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            10/14 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                7B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            8
+            <br/>          </td>
+          <td class="center date-hl">
+            10/19 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                8A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 8<br/>
+                  (<i>Due 10/23 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            10/21 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                8B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            9
+            <br/>          </td>
+          <td class="center date-hl">
+            10/26 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                9A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 9<br/>
+                  (<i>Due 10/30 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            10/28 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                9B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            10
+            <br/>          </td>
+          <td class="center date-hl">
+            11/02 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                10A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 10<br/>
+                  (<i>Due 11/06 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            11/04 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                10B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="1" class="center">
+            11
+            <br/>          </td>
+          <td class="center date-hl">
+            11/09 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                11A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="1" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="1" class="center">
+                Homework 11<br/>
+                  (<i>Due 11/13 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            12
+            <br/>          </td>
+          <td class="center date-hl">
+            11/16 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                12A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 12<br/>
+                  (<i>Due 11/20 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            11/18 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                12B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="1" class="center">
+            13
+            <br/>          </td>
+          <td class="center date-hl">
+            11/23 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                13A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="1" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="1" class="center">
+                Homework 13<br/>
+                  (<i>Due 11/27 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td rowspan="2" class="center">
+            14
+            <br/>          </td>
+          <td class="center date-hl">
+            11/30 Mo
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                14A
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+          <td rowspan="2" class="center">
+            No Lab
+            <br/>
+          </td>
+           <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+          <td rowspan="2" class="center">
+                Homework 14<br/>
+                  (<i>Due 12/04 Fr</i>)
+            <br>
+
+<!--              -->
+<!--              -->
+
+
+              <br/>
+
+
+            <br>
+          </td>
+        </tr>
+        <tr>
+          <td class="center date-hl">
+            12/02 We
+          </td>
+          <td>
+
+          </td>
+          <td class="center">
+                14B
+              <br/>
+
+              <br/>
+<!--              -->
+                            <br>
+                            <br/>
+<!--              -->
+          </td>
+
+          <!-- This section pertains to lab for regular semesters-->
+ <!-- Terminating if for regular lab-->
+
+          <!-- This section pertains to lab for summer semesters-->
+ <!-- Terminating if for summer lab-->
+
+          <!-- This section pertains to homeworks -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var x = document.getElementsByClassName("date-hl");
+  var k = x.length
+  var i;
+  for (i = 0; i < k; i++) {
+    x[i].setAttribute("id", "date-hl".concat(i.toString()));
+  }
+
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
+
+  today = mm + '/' + dd + '/' + yyyy;
+
+  for (j = 0; j < k; j++) {
+    var currDate = document.getElementById("date-hl".concat(j.toString())).innerText
+    var curr_dd = String(currDate).slice(3, 5)
+    var curr_mm = String(currDate).slice(0, 2); //January is 0!
+
+    currDate = curr_mm + '/' + curr_dd + '/2022';
+
+    if (currDate < today) {
+      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#daede0";
+    } else if (currDate === today) {
+      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#f5f5e6";
+    } else {
+      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#ede3df";
+    }
+  }
+
+}, false);
+</script>
+
+</div>
+
+<div class="row">
+  <a class="anchor" id="notes"></a>
+  <h2>Notes</h2>
+ <!-- Grey notes are *still relevant material* for the course! They simply have not yet been covered in lecture. Blue notes have been covered in lecture. Notes with an [updated] tag to their left have been changed since last semester's iteration. Be aware that the un-updated notes are subject to change. -->
+
+  <div class="note-list">
+    <ul>
+    </ul>
+  </div>
+</div>
+<div class='row'>
+  <a class="anchor" id="google-calendar"></a>
+  <h2>Calendars</h2>
+  <!-- <h3 style="color: red;">All office hours and HW Parties will be held in Soda 410.</h3> -->
+  <!-- Homework party is held in the Wozniak Lounge and in-person office hours are held in Cory 144MA. The queue for office hours is at <a href="https://oh.eecs16a.org">oh.eecs16a.org -->
+  <!-- TODO(fa26): this iframe still embeds the three Spring 2026 Google
+       Calendars (lecture/discussion, office hours, HW party). Swap in the
+       Fall 2026 calendar IDs; each `src=` param is one calendar. -->
+  <div class="scrollable">
+  <iframe src="https://calendar.google.com/calendar/embed?src=c_7a73996f23f63c7180ab70b0162bde6e117f8ac2570e06721d6e1291e26c3cb5%40group.calendar.google.com&color=%232952A3&src=c_7b4fc23f7fde1b74c52f6c0775a3a084c8af63a307f55fd6ae16f7c07bcc563e%40group.calendar.google.com&color=%23B1440E&src=c_99ab172c9d62052f54e76dc77eaba774ac68ca1305e1ce6490d2994e27e9b394%40group.calendar.google.com&color=%23F6BF26&ctz=America%2FLos_Angeles&mode=WEEK&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=1&wkst=1" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe></div>
+  <!-- <div class="scrollable">
+    <iframe src="https://calendar.google.com/calendar/embed?mode=WEEK&ctz=America%2FLos_Angeles&src=c_7b4fc23f7fde1b74c52f6c0775a3a084c8af63a307f55fd6ae16f7c07bcc563e@group.calendar.google.com" style="border:0" width="100%" height="600"></iframe>
+  </div> -->
+  <!-- <div class="scrollable">
+    <iframe src="https://calendar.google.com/calendar/embed?src=c_a67c01564ca78db3568371ba38239d385611197534de7ca8b1642a6bb5700bd7@group.calendar.google.com&ctz=America%2FLos_Angeles&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=c_ccf3d6bf3cd5b7bf9e722eb66a5d5b97a3828da22f032dd34887a52f5b962bae@group.calendar.google.com&amp;color=%235229A3&amp;src=c_641556a0cdf0627ae1bd06b6543c4cac396acdf5562a86594ed4b3d8db58d323@group.calendar.google.com&amp;color=%230F4B38&amp;src=c_a67c01564ca78db3568371ba38239d385611197534de7ca8b1642a6bb5700bd7@group.calendar.google.com&amp;color=%23222222&amp;src=c_1079746184d8b6e952a2e68f8ba740065b3702e31f7c2ce25191f1537b882822@group.calendar.google.com&amp;color=%234c7f9e&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </div>
+  <div class="scrollable">
+    <iframe src="https://calendar.google.com/calendar/embed?src=c_1079746184d8b6e952a2e68f8ba740065b3702e31f7c2ce25191f1537b882822@group.calendar.google.com&ctz=America%2FLos_Angeles&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=c_ccf3d6bf3cd5b7bf9e722eb66a5d5b97a3828da22f032dd34887a52f5b962bae@group.calendar.google.com&amp;color=%235229A3&amp;src=c_641556a0cdf0627ae1bd06b6543c4cac396acdf5562a86594ed4b3d8db58d323@group.calendar.google.com&amp;color=%230F4B38&amp;src=c_a67c01564ca78db3568371ba38239d385611197534de7ca8b1642a6bb5700bd7@group.calendar.google.com&amp;color=%23222222&amp;src=c_1079746184d8b6e952a2e68f8ba740065b3702e31f7c2ce25191f1537b882822@group.calendar.google.com&amp;color=%234c7f9e&amp;ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+  </div> -->
+</div><style>
+  div.indentlarge {
+    text-indent: 120px;
+  }
+
+  h2 {
+    margin-bottom: 10px; /* Reduce space below the heading */
+  }
+
+  p {
+    margin-bottom: 5px; /* Reduce space below the paragraph */
+  }
+
+  .table-responsive {
+    margin-top: 5px; /* Reduce space above the table */
+  }
+
+  table {
+    border-spacing: 0; /* Remove default spacing between table cells */
+  }
+  </style>
+
+  <div class="row">
+      <a class="anchor" id="colored-calendar"></a>
+      <h2>Discussion Schedule</h2>
+      <!-- <p>Each day's discussion covers different material. You only need to attend one discussion per day <b>Tuesday</b> and <b>Thursday</b>.
+        <b>NOTE:</b> The extended section is 2 hours long and will go over the material in more depth. Also, there are two simultaneous discussions at 9 am and 4 pm. You are welcome to go to whichever is more convenient.</p> -->
+      <!-- <p>Monday and Wednesday discussion sections cover different material, and you are very strongly encouraged to go to a discussion both days.</p> -->
+      <!-- <p></p> -->
+      <div class="table-responsive">
+          <table align="left" border="1" class="table table-bordered table-striped-disc-cal" style="width: 99%;" role="presentation">
+              <thead>
+                  <tr>
+                      <td style="background-color: #91c8d9;" class="center" border="5" colspan="5">
+                          <b>Discussion Schedule</b>
+                      </td>
+                  </tr>
+                  <tr>
+                      <td style="background-color: rgba(232, 225, 211, 0.5);">Time</td>
+                      <!-- <td style="background-color: rgba(232, 225, 211, 0.5);">Monday</td> -->
+                      <td style="background-color: rgba(232, 225, 211, 0.5);"><b>Tuesday</b></td>
+                      <!-- <td style="background-color: rgba(232, 225, 211, 0.5);">Wednesday</td> -->
+                      <td style="background-color: rgba(232, 225, 211, 0.5);"><b>Thursday</b></td>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+      </div>
+  </div><div class="row">
+  <a class="anchor" id="resources"></a>
+  <h2>Resources</h2>
+
+  <h3><a target="_blank" href="https://edstem.org/us/courses/94600/discussion">Ed</a> (Ask Questions Here)</h3>
+  <!-- <h3><a target="_blank" href="hw-practice.html">Homework Practice Problems</a></h3> -->
+  <!-- <h3><a target="_blank" href="https://web.stanford.edu/~boyd/vmls/vmls.pdf">Textbook: Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares by Stephen Boyd and Lieven Vandenberghe</a></h3> -->
+
+  </p>
+
+  <h3>Technology Needs (STEP)</h3>
+  <p> Student Technology Equity Program (STEP). STEP provides laptops and other technologies for free and is for undergraduate, graduate, and professional students. It requires just a simple online application form. For details, see <a href="policies.html#techSTEP">here</a>. </p>
+
+  <h3>Extra Resources</h3>
+  <ul>
+    <li><a target="_blank" href="https://web.stanford.edu/~boyd/vmls/vmls.pdf">Introduction to Applied Linear Algebra – Vectors, Matrices, and Least Squares</a> Stephen Boyd and Lieven Vandenberghe</li>
+    <li><a target="_blank" href="https://www.youtube.com/watch?v&#x3D;oR6G1MUMveE&amp;list&#x3D;PLoROMvodv4rMz-WbFQtNUsUElIh2cPmN9">Professor Stephen Boyd&#x27;s Videos</a> </li>
+    <li><a target="_blank" href="student-resources/guide_to_readings.pdf">EE16A&#x27;s Guide to the Schaum and Strang Texts</a> </li>
+    <li><a target="_blank" href="https://math.mit.edu/~gs/linearalgebra/ila5/indexila5.html">Introduction to Linear Algebra</a> by Gilbert Strang</li>
+    <li><a target="_blank" href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/resources/mit18_06s10zoomnotes/">ZoomNotes For Linear Algebra</a> by Gilbert Strang</li>
+    <li><a target="_blank" href="http://people.disim.univaq.it/~costanzo.manes/EDU_stuff/Theory%20and%20Problems%20of%20Signals%20&amp;%20Systems_Hsu_Schaum95.pdf">Schaum&#x27;s Outlines of Linear Algebra, 5th ed.</a> by Seymour Lipschutz and Marc Lipson. Free if login from the university network. Also see <a rel="noopener noreferrer" target="_blank" href="https://www.accessengineeringlibrary.com/roaming">roaming passports</a>.</li>
+    <li><a target="_blank" href="https://ptolemy.berkeley.edu/books/leevaraiya/releases/LeeVaraiya_DigitalV2_04.pdf#page&#x3D;707">Complex Number Review:</a> Structure and Interpretation of Signals and Systems by Edward Ashford Lee and Pravin Varaiya</li>
+    <li><a target="_blank" href="https://www.accessengineeringlibrary.com/content/book/9781260454246">Schaum&#x27;s Outline of Signals and Systems</a> </li>
+    <li><a target="_blank" href="https://www.youtube.com/watch?v&#x3D;gXbThCXjZFM&amp;list&#x3D;PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv">Data-Driven Science and Engineering Playlist</a> </li>
+    <li><a target="_blank" href="https://www.databookuw.com/">Data-Driven Science and Engineering Book</a> </li>
+  </ul>
+</div>
+<div class="row">
+  <a class="anchor" id="exams"></a>
+  <h2>Past Exams</h2>
+  Past exams vary in scope from semester to semester, and may include topics that are not in scope for the current semester or module. Unavailable exams are indicated by N/A. In-scope topics for the current semester will be posted on Ed about a week before the corresponding exam.
+  <br>
+  <br>
+  <div class="table-responsive exam-list">
+    <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 50%;">
+      <thead>
+        <tr>
+          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Semester</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Midterm 1</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Midterm 2</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Final/Midterm 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class='center'> fa25 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa25_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa25_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa25_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa25_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa25_mt3_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa25_mt3_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp25 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp25_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp25_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp25_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp25_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp25_mt3_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp25_mt3_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa24 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa24_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa24_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa24_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa24_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa24_mt3_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa24_mt3_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp24 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp24_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp24_mt1_ans.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp24_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp24_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp24_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp24_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa23 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa23_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa23_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa23_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa23_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa23_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa23_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp23 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp23_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp23_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp23_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp23_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp23_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp23_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa22 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa22_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa22_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa22_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa22_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa22_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa22_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp22 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp22_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp22_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp22_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp22_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp22_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp22_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa21 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa21_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa21_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa21_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa21_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa21_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa21_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp21 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp21_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp21_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp21_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp21_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp21_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp21_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa20 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa20_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa20_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa20_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa20_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa20_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa20_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> su20 </td>
+          <td class='center'>
+            <a href="student-resources/exams/su20_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/su20_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/su20_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/su20_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/su20_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/su20_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp20 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp20_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp20_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp20_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp20_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp20_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp20_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa19 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa19_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa19_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa19_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa19_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa19_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa19_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp19 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp19_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp19_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp19_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp19_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp19_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp19_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa18 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa18_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa18_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa18_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa18_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa18_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa18_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp18 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp18_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp18_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp18_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp18_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp18_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp18_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa17 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa17_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa17_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa17_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa17_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa17_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa17_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> su17 </td>
+          <td class='center'>
+            <a href="student-resources/exams/su17_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/su17_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/su17_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/su17_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+
+
+
+            N/A
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp17 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp17_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp17_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp17_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp17_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+
+
+
+            N/A
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa16 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa16_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa16_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa16_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa16_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa16_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa16_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp16 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp16_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp16_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp16_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp16_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp16_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp16_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> fa15 </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa15_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa15_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa15_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa15_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/fa15_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/fa15_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> sp15 </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp15_mt1_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp15_mt1_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp15_mt2_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp15_mt2_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+          <td class='center'>
+            <a href="student-resources/exams/sp15_final_exam.pdf" target="_blank">pdf</a>, <a href="student-resources/exams/sp15_final_sol.pdf" target="_blank">sol</a>
+
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div><!-- <div class="row">
+  <a class="anchor" id="sims"></a>
+  <h2>Simulations and Demos</h2>
+  This is a running list of simulations and demos that have been created in recent semesters (in rough order of appearance).
+  <br>
+  <br>
+  <div class="table-responsive exam-list">
+    <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 100%;">
+      <thead>
+        <tr>
+          <th style="background: #91c8d9" scope="col" class='col-md-1 center'> Semester </th>
+          <th style="background: #91c8d9" scope="col" class='col-md-4 center'> Module 1 </th>
+          <th style="background: #91c8d9" scope="col" class='col-md-4 center'> Module 2 </th>
+          <th style="background: #91c8d9" scope="col" class='col-md-4 center'> Module 3 </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class='center'>Su20</td>
+          <td class='center'>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Fsu20_lec1C&branch=master" target="_blank" rel="noreferrer">Vectors and Span</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Fsu20_lec1D&branch=master" target="_blank" rel="noreferrer">Visualizing (Null + Column)spaces</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Fsu20_lec2A&branch=master" target="_blank" rel="noreferrer">Visualizing Eigenspaces</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Fsu20_lec2B&branch=master" target="_blank" rel="noreferrer">Visualizing Eigenquantities</a> <br>
+          </td>
+          <td class='center'>
+            <a href="https://www.tinkercad.com/things/afk2nlPHsaa" target="_blank" rel="noreferrer"> Current Divider </a> <br>
+            <a href="https://www.tinkercad.com/things/aiOwTTqxjRW" target="_blank" rel="noreferrer"> Modular Circuits </a> <br>
+            <a href="https://www.tinkercad.com/things/0wIXz3MkD7B" target="_blank" rel="noreferrer"> Resist the Touch I</a>, <a href="https://www.tinkercad.com/things/k5oolj2tUEN" target="_blank" rel="noreferrer"> Resist the Touch II </a> <br>
+            <a href="http://tinyurl.com/y2xp82fs" target="_blank" rel="noreferrer"> Charge Sharing Sim (Cap Touch)</a>, <a href="http://tinyurl.com/y2pf7v2u" target="_blank" rel="noreferrer"> Example </a> <br>
+            <a href="http://tinyurl.com/y238s36u" target="_blank" rel="noreferrer"> Comparator + Inverting Amplifier Sim </a> <br>
+            <a href="http://tinyurl.com/y45fb625" target="_blank" rel="noreferrer"> Inverting Amplifier </a> <br>
+            <a href="http://tinyurl.com/yxr5qarh" target="_blank" rel="noreferrer"> Timer Circuit </a>, <a href="http://tinyurl.com/y3f7t75e" target="_blank" rel="noreferrer"> Another Timer Circuit </a> <br>
+            <a href="http://tinyurl.com/y3y4qgeg" target="_blank" rel="noreferrer"> Noise Cancelling Headphones </a> <br>
+          </td>
+          <td class='center'>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Fsu20_lec5D&branch=master" target="_blank" rel="noreferrer">Image Search with Inner Product</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Fsu20_lec6B&branch=master" target="_blank" rel="noreferrer">Finding GPS Signals with Correlation</a> <br>
+          </td>
+        </tr>
+        <tr>
+          <td class='center'>Fa19</td>
+          <td class='center'>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Ffa19_gauss_elim&branch=master" target="_blank" rel="noreferrer">Gaussian Elimination (Profs Boser + Denero)</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Ffa19_linsys&branch=master" target="_blank" rel="noreferrer">Linear Systems</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Ffa19_det_demo&branch=master" target="_blank" rel="noreferrer">Determinant Intuition</a> <br>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Ffa19_eigval_demo&branch=master" target="_blank" rel="noreferrer">Eigenvalue Intuition</a> <br>
+          </td>
+          <td class='center'></td>
+          <td class='center'>
+            <a href="https://eecs.datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fee16a%2Fpublic_hw_notebooks&urlpath=tree%2Fpublic_hw_notebooks%2Ffa19_OMP&branch=master" target="_blank" rel="noreferrer">OMP Demo with Gold Codes</a> <br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> --><!-- <div class="row">
+  <a class="anchor" id="practiceSets"></a>
+  <h2>Practice Sets: Links to Notes and Solutions</h2>
+  <p> It is very strongly recommend that you try the problems themselves <a target="_blank" href="hw-practice.html">here</a> before looking at the solutions below. The links for solutions are not perfect, so you may need to scroll to the bottom of the linked page to find them. Give feedback by emailing at our course email. </p>
+  <div class="table-responsive exam-list">
+    <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 60%;">
+      <thead>
+        <tr>
+          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Module 1</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Module 2</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Module 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class='center'>
+            <a href="https://eecs16a.org/hw-practice.html#/set/0" target="_blank">Set 0 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps0_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps0_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/1" target="_blank">Set 1 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps1_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps1_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/2" target="_blank">Set 2 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps2_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps2_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/3" target="_blank">Set 3 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps3_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps3_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/4" target="_blank">Set 4 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps4_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps4_sol" target="_blank">Sols</a>
+          </td>
+          <td class='center'>
+            <a href="https://eecs16a.org/hw-practice.html#/set/5" target="_blank">Set 5 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps5_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps5_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/6" target="_blank">Set 6 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps6_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps6_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/7" target="_blank">Set 7 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps7_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps7_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/8" target="_blank">Set 8 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps8_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps8_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/9" target="_blank">Set 9 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps9_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps9_sol" target="_blank">Sols</a>
+          </td>
+          <td class='center'>
+            <a href="https://eecs16a.org/hw-practice.html#/set/10" target="_blank">Set 10 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps10_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps10_sol" target="_blank">Sols</a> <br> <br>
+            <a href="https://eecs16a.org/hw-practice.html#/set/11" target="_blank">Set 11 Problems</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps11_notes" target="_blank">Notes</a> <br>
+            <a href="https://bit.ly/eecs16a_compendium_ps11_sol" target="_blank">Sols</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> --><!--<div class="row">
+  <a class="anchor" id="csm"></a>
+  <h2>CSM Materials</h2>
+  Below are the CSM worksheets that have been released for the current semester.
+  <br>
+  <br>
+  <div class="table-responsive exam-list">
+    <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 70%;">
+      <thead>
+        <tr>
+          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Week Number</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-7 center'>Topics</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Worksheets</th>
+          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Solutions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class='center'> 1 </td>
+          <td class='center'>
+            Gaussian Elimination, Matrix-Vector Operations, Linearity, and Span
+          </td>
+          <td class='center'>
+            <a href="csm/Week1_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week1_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 2 </td>
+          <td class='center'>
+            Proofs, Transition Matrices, and Invertibility
+          </td>
+          <td class='center'>
+            <a href="csm/Week2_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week2_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 3 </td>
+          <td class='center'>
+            Fundamental Subspaces
+          </td>
+          <td class='center'>
+            <a href="csm/Week3_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week3_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 4 </td>
+          <td class='center'>
+            Eigenvectors, Eigenvalues, and PageRank
+          </td>
+          <td class='center'>
+            <a href="csm/Week4_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week4_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 5 </td>
+          <td class='center'>
+            Passive Sign Convention, and NVA
+          </td>
+          <td class='center'>
+            <a href="csm/Week5_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week5_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 6 </td>
+          <td class='center'>
+            Resistivity and Equivalence
+          </td>
+          <td class='center'>
+            <a href="csm/Week6_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week6_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 7 </td>
+          <td class='center'>
+            Superposition and Capacitance
+          </td>
+          <td class='center'>
+            <a href="csm/Week7_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week7_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 8 </td>
+          <td class='center'>
+            Touchscreens and Charge Sharing
+          </td>
+          <td class='center'>
+            <a href="csm/Week8_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week8_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 9 </td>
+          <td class='center'>
+            Comparators, Op Amps and Circuit Design
+          </td>
+          <td class='center'>
+            <a href="csm/Week9_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week9_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 10 </td>
+          <td class='center'>
+            Vector Norms, Products, and Correlation
+          </td>
+          <td class='center'>
+            <a href="csm/Week10_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week10_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td class='center'> 11 </td>
+          <td class='center'>
+            Vector Norms, Products, and Correlation
+          </td>
+          <td class='center'>
+            <a href="csm/Week11_Worksheet.pdf" target="_blank">pdf</a>
+          </td>
+          <td class='center'>
+            <a href="csm/Week11_Answers.pdf" target="_blank">sol</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>-->
+<style>
+.gsicollapsible {
+  display: inline-block;
+  width: 150px;
+  height: 35px;
+  font-family: Raleway;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #91C9FF;
+  outline: none;
+  transition: 0.3s ease-in-out;
+  border-radius:50px 50px 50px 50px;
+  padding: 0px;
+}
+
+.gsicollapsible.active {
+  background: #7876d061;
+  border: 1px solid #ff91cb;
+  border-radius:50px 50px 50px 50px;
+}
+
+.gsicollapsible:hover {
+  transition: 0.3s ease-in-out;
+  background: #7876d061;
+  border-radius:50px 50px 50px 50px;
+}
+
+.gsicontent {
+  padding: 0px 0px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: rgba(145, 200, 217,0.2);
+
+}
+</style>
+<a class="anchor" id="staff"></a>
+<h2>Course Staff</h2>
+<p>Please add berkeley.edu to the end of all emails!</p>
+
+<p>We also have 2 special emails for various purposes. Where applicable, please use these emails so that all relevant course staff can view the message. Note that we prefer for technical or content questions to go on Ed!</p>
+<ul>
+  <li><b>eecs16a.lab@</b>: for any lab-related questions or concerns</li>
+  <li><b>eecs16a@</b>: for anything else (including exam-related/administrative questions or concerns)</li>
+</ul>
+<h3>Instructor</h3>
+<div class='row'>
+  <div class='center col-md-4 col-sm-4 col-xs-6 bottomspace'>
+        <img class='headshot img-circle' src='photos-instructor/BabakAyazifar.png'/></a>
+    <br/>
+    <br>
+    <b>Babak Ayazifar</b><br/>
+    <small>  </small> <br/>
+    ayazifar@
+  </div>
+</div>
+
+<h3>Course Staff</h3>
+<br> <br>
+<div class='row'>
+</div>
+<div class='row' style="margin-top: -20px;">
+</div>
+
+<script>
+var coll = document.getElementsByClassName("gsicollapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script><div class="row">
+  <a class="anchor" id="exams"></a>
+  <h2>Policies</h2>
+  For a full list of course policies and the syllabus, see <a href="policies.html" target="_blank">here</a>.
+</div><!-- <div class='row'>
+  <a class="anchor" id="about"></a>
+
+  <h2>About</h2>
+
+  <h3>EECS 16AB Course Coverage</h3>
+  <a class="anchor" id="coverage"></a>
+    <p>
+      EECS16AB was specially designed to ramp students up to prepare for courses in machine learning and design and are important classes to set the stage for the rest of your time in the department.
+    </p>
+
+  <h3>FAQ</h3>
+  <a class="anchor" id="faq"></a>
+    <p>
+      Q1: Should I take EECS16A my first semester at Cal? <br><br>
+      A1: If you have taken an AP calculus class, then the answer is yes! EECS16A has no prerequisites other than calculus and is designed with freshmen and incoming transfer students in mind. It is designed to be taken alongside 61A. Furthermore, we reserve seats for freshmen and incoming transfer students in the class, so you are essentially guaranteed a spot in the class your first year. It will be harder to get into the class as an upperclassman.
+    </p>
+    <p>
+      Q2: Should I take EECS 16A and EECS 16B before or after CS 70? <br><br>
+      A2: EECS16A and 16B were specifically designed to help ease the transition to CS70 for incoming students. These classes provide an introduction to proofs and the kind of mathematical thinking that is very useful in a class like CS70. We recommend you take 16AB before taking CS70, this should help you have an easier time in CS 70.
+    </p>
+    <p>
+      Q3: Should I take MATH 54 before taking EECS16A? <br><br>
+      A3: EECS 16A is designed to be taken without any prerequisites, so there is no need to take MATH 54 before EECS 16A. EECS 16AB teaches linear algebra with the intent of preparing you for courses like EECS 127 (Optimization) and EECS 189 (Machine Learning) and provides engineering and machine learning examples and applications for linear algebra. EECS 16AB also uses Jupyter notebooks and python so you can better connect linear algebra and computation.
+    </p>
+</div> -->
+<!--<h2>Aesthetics and Feedback</h2>-->
+<h2>Feedback</h2>
+<a class="anchor" id="aesthetics"></a>
+
+<!--<p class="add-bottom-margin"> You can optionally toggle between the 16 Series legacy font (Roboto) and the default font (Raleway) for this website. If you have other suggestions for this website, feel free to let the software TAs know <a rel="noopener noreferrer" target="_blank" href="mailto:austinpatel@berkeley.edu">here.</a>-->
+<!--<div class="center">-->
+<!--	<input type="button" style="background-color: #dceef5; border-radius:20px" value="Toggle Font: Roboto" onclick = "fontChange('Roboto')">-->
+<!--	<input type="button" style="background-color: #dceef5; border-radius:20px" value="Toggle Font: Raleway (Default)" onclick = "fontChange('Raleway')">-->
+<!--</div>-->
+<p>If you have suggestions for this website or see problems, feel free to let the software TAs know <a rel="noopener noreferrer" target="_blank" href="mailto:samik_garg@berkeley.edu">here.</a></p>
+<br>
+<br>
+<br>
+
+<script>
+function fontChange(f) {
+	if (typeof(Storage) !== "undefined") {
+    var prev = localStorage.getItem("fontFamily");
+	  localStorage.setItem("fontFamily", f);
+	  document.body.style.fontFamily = localStorage.getItem("fontFamily");
+    showFontChange(f, prev);
+	}
+}
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+
+  showCopied();
+}
+
+function showCopied() {
+  var x = document.getElementById("snackbar1");
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+
+function showFontChange(f, prev) {
+  var x = document.getElementById("snackbar2");
+  if (prev == f) {
+    x.innerHTML = "site font is already ".concat(prev).concat("!");
+  }
+  else {
+    x.innerHTML = "changed site font to: ".concat(f).concat("!");
+  }
+  x.className = "show";
+  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+    </div>
+  </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap-dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/parallax.min.js"></script>
+
+  </body>
+</html>

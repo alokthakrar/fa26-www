@@ -1,0 +1,13 @@
+# Course staff for staff.html. Emails omit berkeley.edu (see staff.html).
+# Images must be files in photos-gsi/ (and photos-gsi/fun/ for imageFun). Download from form links and name to match.
+#
+# Cleared for Fall 2026. Add one entry per GSI/TA as the roster is finalized.
+# Headshots must be cropped to 512x512 (see the software staff runbook).
+#
+# - name:
+#   email:
+#   role:
+#   bio: ""
+#   image:
+#   imageFun:
+#   pronouns:
