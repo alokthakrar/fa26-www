@@ -214,6 +214,17 @@ img.headshot:hover {
   margin-bottom: 20px;
 }
 
+/* Staff grid: the floated Bootstrap columns snag on each other when bios differ
+   in length, leaving holes mid-grid. Flex wrapping keeps every card in DOM
+   order and pushes any leftover space to the end of the last row. */
+.staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+.staff-grid > div {
+  float: none;
+}
+
 .scrollable {
   overflow: auto;
   white-space: nowrap;
