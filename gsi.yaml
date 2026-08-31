@@ -1,13 +1,161 @@
 # Course staff for staff.html. Emails omit berkeley.edu (see staff.html).
-# Images must be files in photos-gsi/ (and photos-gsi/fun/ for imageFun). Download from form links and name to match.
+# Images must be files in photos-gsi/ (and photos-gsi/fun/ for imageFun).
+# Download from the staff form links and name to match; entries with no image
+# fall back to img/doge.jpg.
 #
-# Cleared for Fall 2026. Add one entry per GSI/TA as the roster is finalized.
-# Headshots must be cropped to 512x512 (see the software staff runbook).
+# Fall 2026 roster, ordered: Head TA, Head Content TA, Head Lab TA, Content TAs,
+# Lab TAs, Tutors, Lab Staff. Built from the staff contact form responses --
+# only name, email, role, bio, pronouns and photos are published here.
 #
-# - name:
-#   email:
-#   role:
-#   bio: ""
-#   image:
-#   imageFun:
-#   pronouns:
+
+- name: Alok Thakrar
+  email: aut@
+  role: Head TA
+  bio: "Hi! I'm Alok, a junior from Santa Barbara, CA majoring in EECS. This is my fourth semester on course staff! I love Chipotle, Ryan Gosling, chess, and making new things. I'm also excited about robotics and computer vision. In my experience, 66 taught me a lot of foundational skills that *span a wide basis* across a lot of my interests, and I hope you'll feel the same and have a lot of fun in the course. Looking forward to meeting ya'll!"
+  image: AlokThakrar.png
+  imageFun: AlokThakrarsilly.png
+  pronouns: he/him
+
+- name: Mallika Agrawal
+  email: mallika.agrawal@
+  role: Head Content TA
+  bio: "Hi! I'm Mallika, a senior studying EECS from the Bay. I'm interested in many different areas within EECS including AI/ML and understanding the intersection of hardware and software. In my free time, I love to try out new crafts, currently working on improving my crochet! Excited to be teaching all of you!"
+  image: MallikaAgrawal.jpg
+  imageFun: MallikaAgrawalsilly.jpg
+  pronouns: she/her/hers
+
+- name: Baris Oktay
+  email: kbarisoktay@
+  role: Head Lab TA
+  bio: "hey guys! i'm Baris, a senior in EECS with a minor in MSE. this is my 4th semester with EECS 66, formerly 16A if some of you remember. i do research in biosensors and have worked on a bunch of things from nanofab and analog design to automation and imaging, mostly in a biomedical engineering context. in my free time, i like playing soccer, wandering around with friends, or playing online pool lol. i'll be the head lab this semester, and honestly labs are my favorite part of EECS 66, so i'm hoping to share that with y'all. excited to meet everyone and have a great semester! please don't hesitate to reach out for anything!"
+  image: BarisOktay.jpg
+  imageFun: BarisOktaySilly.jpeg
+  pronouns: he/him/his
+
+- name: Ryan Black
+  email: rblack06@
+  role: Content TA
+  bio: "Howdy, partner. I am entering year 3. This is my first time ever taking EE 66 - for this, I am super duper excited! My favorite thing ever is to 'spend time.' If I had 100 seconds to spend, I would put 27 into long runs and bike rides. Then, I'd put 14 into board games (19 if it's a good deck builder). I might drop 3-7 seconds on poetry if I'm feeling inspired, and the rest is going into reading! I loooove reading (some may call me 'Constant Reader') and will gladly take your recommendations. Let's have a great Fall semester :)"
+  image: RyanBlack.jpg
+  imageFun: RyanBlacksilly.jpg
+  pronouns:
+
+- name: Kevin Ying
+  email: yingk@
+  role: Content TA
+  bio: "Hello! I'm a 4th year EECS student, and it's my second time as a content TA! I like to hike and bike on the weekends. I currently work with the control and estimation of soft/micro robots. If you are excited about robotics, feel free to chat!"
+  image: KevinYing.png
+  imageFun: KevinYingsilly.png
+  pronouns: he/him/his
+
+- name: Sid Banerjee
+  email: sidbanerjee@
+  role: Content TA
+  bio: "Hey, I'm Sid! I love signal processing because of its application in acoustics/audio processing. I love making music and specifically exploring how digital signal processing techniques can make cool sounds & effects."
+  image: SidBanerjee.jpg
+  imageFun:
+  pronouns: he/him/his
+
+- name: Harry Yang
+  email: hengyang@
+  role: Content TA
+  bio: "Hey y'all! I'm a third year EECS student interested in physics and statistics. In my free time, I like to take photos and procrastinate. My favorite topic in EE 66 is the SVD."
+  image: HengYang.jpg
+  imageFun: HengYangSilly.jpg
+  pronouns: he/him/his
+
+- name: Kerry Pan
+  email: kerrypan25@
+  role: Lab TA
+  bio: "Hi, I'm a senior studying EECS, and in my free time I enjoy playing soccer and pickleball. Looking forward to this semester!"
+  image: KerryPan.png
+  imageFun:
+  pronouns:
+
+- name: Jonathan Loy
+  email: jonathanloy@
+  role: Lab TA
+  bio: "Hello, I'm Jonathan, a 4th year undergrad studying EECS and Nuclear Engineering. I'm interested in power and energy, particularly power systems and nuclear energy. Outside of academics, I enjoy music as I play bass clarinet, clarinet, and viola. I look forward to meeting you all this semester :D"
+  image: JonathanLoy.jpg
+  imageFun: JonathanLoysilly.jpg
+  pronouns:
+
+- name: Prarthan Ghosh
+  email: prarthan_ghosh@
+  role: Tutor
+  bio: "Hi! I'm a junior studying CS and applied math. Outside of class, I do computational neuroscience research, play basketball, and dabble in reading. This semester, I'm trying to pick up some interesting hobby and read more about control theory. Looking forward to a great semester!"
+  image: PrarthanGhosh.jpg
+  imageFun: PrarthanGhoshsilly.jpg
+  pronouns:
+
+- name: Nick Kong
+  email: kong_nicholas@
+  role: Tutor
+  bio: "Hi! I'm a third-year studying EECS. I'm interested in power systems modeling, optimization, and pretty much everything about the electric grid. I love going on long bike rides, trail running, reading, and cooking. Always down to chat!"
+  image:
+  imageFun:
+  pronouns: he/him
+
+- name: Adit Anantaraman
+  email: aditya.anant@
+  role: Tutor
+  bio: "Hi! I'm an EECS junior interested in theoretical and computational neuroscience, especially auditory and visual perception and emergent intelligence. I do research on birdsong and vocal communication, and EE 66 concepts pop up every day! I like making music, DJing, playing video games, watching movies, taking photos, and playing volleyball!!"
+  image:
+  imageFun:
+  pronouns: he/him/his
+
+- name: Jarrett Singh
+  email: jarrettsingh@
+  role: Tutor
+  bio: "Hi! I'm Jarrett and I'm a sophomore in EECS. I love learning about hardware topics (currently interested in analog and digital design) and building electric race cars. When I'm not studying in the Environmental Design Library, you can find me hiking on the fire trails, lounging at the marina, or eating sweet treats with friends!"
+  image: JarrettSingh.jpg
+  imageFun: JarrettSinghSilly.jpg
+  pronouns: he/him/his
+
+- name: Mihir Sharma
+  email: mihirsharma@
+  role: Lab Staff
+  bio: "Hi! I'm Mihir, a second-year in EECS, Neuroscience, and Math. I do deep brain stimulation research at UCSF's Chang Lab, help lead Neurotech@Berkeley, and enjoy building on the side. I'd love to share the intuitions I built taking 66 with y'all! Outside class I'm usually at a hackathon, exploring SF, running, or playing music - excited to meet everyone this sem!"
+  image:
+  imageFun:
+  pronouns: he/him/his
+
+- name: Daniel Lief
+  email: daniel_lief@
+  role: Lab Staff
+  bio: "Hi! I'm Daniel, a 3rd-year EECS student from the Bay Area. I love playing chess, taking photos, and exploring the Bay. I'm mainly interested in software development but signals are super cool. Hope this semester will be amazing!"
+  image:
+  imageFun:
+  pronouns: he/him
+
+- name: Deepthi Konakanchi
+  email: dskonakanchi@
+  role: Lab Staff
+  bio: "Hey everyone! I'm Deepthi, a sophomore studying EECS, and this is my first time tutoring EE 66! I enjoy exploring the intersection between engineering and healthcare, and I find signal processing useful for it! I'm a tutor for CS 10 as well, and outside of teaching, I love reading, drawing, skateboarding, and trying new food. I also enjoy collecting vinyls, so if anyone has music or restaurant recommendations, let me know! Looking forward to the semester!"
+  image:
+  imageFun:
+  pronouns: she/her/hers
+
+- name: Amin Mobedi
+  email: amin.mobedi@
+  role: Lab Staff
+  bio: "Hello! I'm Amin, a senior studying EECS. I love EE 66 because I can finally decipher mixed signals~~the mathematical type. In my free time, I usually get beaten up in martial arts, go to the gym, make noises on the saxophone, and take way too many pictures of the sky."
+  image:
+  imageFun:
+  pronouns:
+
+- name: Theo Dela Cruz
+  email: theodelacruz@
+  role: Lab Staff
+  bio: "Hi! I'm a sophomore studying EECS, and this is my first semester on staff. My interests are still developing, but currently I'm interested in signal processing and machine learning. I enjoy rock climbing, cubing, playing video games, and watching video essays. Looking forward to this semester!"
+  image:
+  imageFun:
+  pronouns: he/him/his
+
+- name: Preena Maruthavelu
+  email: preena_maruthavelu@
+  role: Lab Staff
+  bio: "Hi, I'm a third year EECS + Bioengineering student and I'm from San Diego! I love the practical applications of EE 66 -- like voice recognition! -- which is how I got interested in speech ML. I like cats and dancing :)"
+  image:
+  imageFun:
+  pronouns: she/her/hers
