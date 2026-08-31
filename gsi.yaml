@@ -116,16 +116,16 @@
   email: mihirsharma@
   role: Lab Staff
   bio: "Hi! I'm Mihir, a second-year in EECS, Neuroscience, and Math. I do deep brain stimulation research at UCSF's Chang Lab, help lead Neurotech@Berkeley, and enjoy building on the side. I'd love to share the intuitions I built taking 66 with y'all! Outside class I'm usually at a hackathon, exploring SF, running, or playing music - excited to meet everyone this sem!"
-  image:
-  imageFun:
+  image: MihirSharma.jpg
+  imageFun: MihirSharmasilly.jpg
   pronouns: he/him/his
 
 - name: Daniel Lief
   email: daniel_lief@
   role: Lab Staff
   bio: "Hi! I'm Daniel, a 3rd-year EECS student from the Bay Area. I love playing chess, taking photos, and exploring the Bay. I'm mainly interested in software development but signals are super cool. Hope this semester will be amazing!"
-  image:
-  imageFun:
+  image: DanielLief.jpg
+  imageFun: DanielLiefsilly.jpg
   pronouns: he/him
 
 - name: Deepthi Konakanchi
@@ -140,8 +140,8 @@
   email: amin.mobedi@
   role: Lab Staff
   bio: "Hello! I'm Amin, a senior studying EECS. I love EE 66 because I can finally decipher mixed signals~~the mathematical type. In my free time, I usually get beaten up in martial arts, go to the gym, make noises on the saxophone, and take way too many pictures of the sky."
-  image:
-  imageFun:
+  image: AminMobedi.jpg
+  imageFun: AminMobedisilly.jpg
   pronouns:
 
 - name: Theo Dela Cruz
