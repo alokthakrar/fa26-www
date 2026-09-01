@@ -438,7 +438,27 @@ function showFontChange(f, prev) {
 
 <div class="indentsmall">
 	<p> Lectures: MTuWTh 9:30-11:00 AM PST, <a href="https://berkeley.zoom.us/j/93838650239" target="_blank"> Lecture Zoom Link </a>, Phone: +1 669 900 6833, Meeting ID: 938 3865 0239 </p>
-</div> --><div class='row'>
+</div> --><style>
+  /* Lecture notes sit under the topic, one small column each. */
+  .lecture-notes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .lecture-note {
+    flex: 0 0 auto;
+    padding: 1px 8px;
+    border: 1px solid #91c8d9;
+    border-radius: 10px;
+    background-color: rgba(145, 200, 217, 0.15);
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+</style>
+
+<div class='row'>
   <a class="anchor" id="schedule"></a>
   <h2>Schedule</h2>
   <p> <b>Lecture videos can be found in the bCourses Media Gallery page</a></b></p>
@@ -467,9 +487,10 @@ function showFontChange(f, prev) {
           </td>
           <td>
             Vectors & Signals
-
-                (<a rel="noopener noreferrer" target="_blank" href = "lecture/Notei.pdf">Note i</a>)
-                (<a rel="noopener noreferrer" target="_blank" href = "lecture/Note1.pdf">Note 1</a>)
+                <div class="lecture-notes">
+                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Notei.pdf">Note i</a></div>
+                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note1.pdf">Note 1</a></div>
+                </div>
           </td>
           <td class="center">
                 0B
@@ -525,8 +546,9 @@ function showFontChange(f, prev) {
           </td>
           <td>
             Vector Spaces & Norms
-
-                (<a rel="noopener noreferrer" target="_blank" href = "lecture/Note1.pdf">Note 1</a>)
+                <div class="lecture-notes">
+                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note1.pdf">Note 1</a></div>
+                </div>
           </td>
           <td class="center">
                 1A
