@@ -38,7 +38,7 @@
   bio: "Howdy, partner. I am entering year 3. This is my first time ever taking EE 66 - for this, I am super duper excited! My favorite thing ever is to 'spend time.' If I had 100 seconds to spend, I would put 27 into long runs and bike rides. Then, I'd put 14 into board games (19 if it's a good deck builder). I might drop 3-7 seconds on poetry if I'm feeling inspired, and the rest is going into reading! I loooove reading (some may call me 'Constant Reader') and will gladly take your recommendations. Let's have a great Fall semester :)"
   image: RyanBlack.jpg
   imageFun: RyanBlacksilly.jpg
-  pronouns:
+  pronouns: he/him/his
 
 - name: Kevin Ying
   email: yingk@
@@ -70,7 +70,7 @@
   bio: "Hi, I'm a senior studying EECS, and in my free time I enjoy playing soccer and pickleball. Looking forward to this semester!"
   image: KerryPan.png
   imageFun:
-  pronouns:
+  pronouns: he/him/his
 
 - name: Jonathan Loy
   email: jonathanloy@
@@ -78,7 +78,7 @@
   bio: "Hello, I'm Jonathan, a 4th year undergrad studying EECS and Nuclear Engineering. I'm interested in power and energy, particularly power systems and nuclear energy. Outside of academics, I enjoy music as I play bass clarinet, clarinet, and viola. I look forward to meeting you all this semester :D"
   image: JonathanLoy.jpg
   imageFun: JonathanLoysilly.jpg
-  pronouns:
+  pronouns: he/him/his
 
 - name: Prarthan Ghosh
   email: prarthan_ghosh@
@@ -86,22 +86,22 @@
   bio: "Hi! I'm a junior studying CS and applied math. Outside of class, I do computational neuroscience research, play basketball, and dabble in reading. This semester, I'm trying to pick up some interesting hobby and read more about control theory. Looking forward to a great semester!"
   image: PrarthanGhosh.jpg
   imageFun: PrarthanGhoshsilly.jpg
-  pronouns:
+  pronouns: he/him/his
 
 - name: Nick Kong
   email: kong_nicholas@
   role: Tutor
   bio: "Hi! I'm a third-year studying EECS. I'm interested in power systems modeling, optimization, and pretty much everything about the electric grid. I love going on long bike rides, trail running, reading, and cooking. Always down to chat!"
-  image:
-  imageFun:
+  image: NicholasKong.jpg
+  imageFun: NicholasKongSilly.jpg
   pronouns: he/him
 
 - name: Adit Anantaraman
   email: aditya.anant@
   role: Tutor
   bio: "Hi! I'm an EECS junior interested in theoretical and computational neuroscience, especially auditory and visual perception and emergent intelligence. I do research on birdsong and vocal communication, and EE 66 concepts pop up every day! I like making music, DJing, playing video games, watching movies, taking photos, and playing volleyball!!"
-  image:
-  imageFun:
+  image: AdityaAnantaraman.jpg
+  imageFun: AdityaAnantaramanSilly.jpg
   pronouns: he/him/his
 
 - name: Jarrett Singh
@@ -132,8 +132,8 @@
   email: dskonakanchi@
   role: Lab Staff
   bio: "Hey everyone! I'm Deepthi, a sophomore studying EECS, and this is my first time tutoring EE 66! I enjoy exploring the intersection between engineering and healthcare, and I find signal processing useful for it! I'm a tutor for CS 10 as well, and outside of teaching, I love reading, drawing, skateboarding, and trying new food. I also enjoy collecting vinyls, so if anyone has music or restaurant recommendations, let me know! Looking forward to the semester!"
-  image:
-  imageFun:
+  image: DeepthiKonakanchi.jpg
+  imageFun: DeepthiKonakanchisilly.jpg
   pronouns: she/her/hers
 
 - name: Amin Mobedi
@@ -142,14 +142,14 @@
   bio: "Hello! I'm Amin, a senior studying EECS. I love EE 66 because I can finally decipher mixed signals~~the mathematical type. In my free time, I usually get beaten up in martial arts, go to the gym, make noises on the saxophone, and take way too many pictures of the sky."
   image: AminMobedi.jpg
   imageFun: AminMobedisilly.jpg
-  pronouns:
+  pronouns: he/him/his
 
 - name: Theo Dela Cruz
   email: theodelacruz@
   role: Lab Staff
   bio: "Hi! I'm a sophomore studying EECS, and this is my first semester on staff. My interests are still developing, but currently I'm interested in signal processing and machine learning. I enjoy rock climbing, cubing, playing video games, and watching video essays. Looking forward to this semester!"
-  image:
-  imageFun:
+  image: TheoDelaCruz.jpg
+  imageFun: TheoDelaCruzsilly.jpg
   pronouns: he/him/his
 
 - name: Preena Maruthavelu

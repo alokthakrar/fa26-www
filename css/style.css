@@ -178,12 +178,8 @@ a.anchor{
 }
 
 
-.table-striped-sched tbody tr:nth-of-type(4n+1), tr:nth-of-type(4n+3) {
-  background-color: rgba(230, 230, 240, 0.5) !important;
-}
-
-.table-striped-sched tbody tr:nth-of-type(4n+0), tr:nth-of-type(4n+2) {
-  background-color: rgba(245, 245, 245, 0.5) !important;
+.table-striped-sched tbody tr {
+  background-color: #E8EFF2 !important;
 }
 
 .table-hover-sched tbody:hover {
@@ -242,7 +238,7 @@ table, th, td {
 
 .navbar-default .navbar-nav>.active>a {
   border-radius: 50px;
-  background-color: rgba(145, 200, 217,0.4);
+  background-color: rgba(107, 150, 168, 0.4);
 }
 
 .dropdown-content {
@@ -266,7 +262,7 @@ table, th, td {
 
 }
 
-.dropdown-content a:hover {background-color: rgba(145, 200, 217,0.9);}
+.dropdown-content a:hover {background-color: rgba(107, 150, 168, 0.35);}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -313,4 +309,53 @@ li {
 
 .note-list li[updated] a::before {
   content: "[updated] ";
+}
+
+.course-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  margin: 0 0 20px 0;
+}
+
+.course-hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.course-hero-welcome {
+  margin: 0 0 6px 0;
+  font-style: italic;
+  font-size: 1.25em;
+  color: #4A6673;
+}
+
+.course-hero-text h1 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.course-hero-text h3 {
+  margin: 0;
+  font-size: 1.75em;
+  font-weight: 600;
+  color: #4A6673;
+}
+
+.course-hero-logo {
+  height: 320px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .course-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .course-hero-logo {
+    height: 220px;
+  }
 }

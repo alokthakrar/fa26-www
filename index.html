@@ -42,7 +42,6 @@
             <div id="navbar" class="navbar-collapse collapse" >
               <ul class="nav navbar-nav pull-right">
                 <li><a id="na1" href="#schedule">Schedule</a></li>
-                <li><a id="na1" href="#notes">Notes</a></li>
                 <li><a id="na1" href="#google-calendar">Calendar</a></li>
                 <li><a id="na1" href="#colored-calendar">Discussions</a></li>
                 <li><a id="na5" href="#resources">Resources</a></li>
@@ -158,9 +157,13 @@ function getCurrFont() {
   EASTER EGG
 </a><!-- Maintained by Berkeley's ee16a staff-->
 
-<div class='row'>
-  <h1><b>EE66</b>, Introduction to Signals, Dynamics, and Information</h1>
-  <h3>Fall 2026</h3>
+<div class="course-hero">
+  <div class="course-hero-text">
+    <p class="course-hero-welcome">Welcome to</p>
+    <h1><b>EE66</b>, Introduction to Signals, Dynamics, and Information</h1>
+    <h3>Fall 2026</h3>
+  </div>
+  <img class="course-hero-logo" src="img/new_snek.png" alt="EE66 logo">
 </div>
 
 <!--<h2>Progress Tracker</h2>
@@ -217,32 +220,7 @@ div.indentsmall {
 
 
 
-/* New styles for the content wrapper */
-.content-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px; /* Adjust as needed */
-  margin: 0 auto; /* Center the content */
-}
 </style>
-<!-- Wrap the content in a div with the new class -->
-<div class="content-wrapper">
-  <div class="text-content">
-    <h2>Important Course Information/Scheduling Updates</h2>
-    <a class="anchor" id="updates"></a>
-    <!-- <p>Lecture is every <b>Monday</b> and <b>Wednesday</b> from <b>6:30 - 8:00 pm</b> in <b>Pimentel 1.</b></p>
-    <b style="color: red;">If you are a dual enrollment student, or you believe you weren't properly enrolled in the course, please reach out to eecs16a@berkeley.edu so that you can be added to bCourses.</b></p>
-    <b style="color: blue;">If you aren't enrolled in the Gradescope, please join with the following code: 6KWXP7</b></p> -->
-
-
-    <!-- <p><b>Please find the OH schedule under the <a href="https://eecs16a.org/#google-calendar">calendars section</a></b></p> -->
-
-  </div>
-  <div class="image-content">
-    <img src="img/new_snek.png" alt="Logo" style="height:250px;">
-  </div>
-</div>
 
 <div id="snackbar1">copied password to clipboard!</div>
 <div id="snackbar2">changed site font!</div>
@@ -448,33 +426,61 @@ function showFontChange(f, prev) {
   }
 
   .lecture-note {
+    position: relative;
+    z-index: 0;
     flex: 0 0 auto;
-    padding: 1px 8px;
-    border: 1px solid #91c8d9;
-    border-radius: 10px;
-    background-color: rgba(145, 200, 217, 0.15);
-    font-size: 0.9em;
+    display: inline-block;
+    min-width: 108px;
+    padding: 5px 32px 6px 16px;
+    border: none;
+    color: #0e3dcc;
+    font-size: 0.85em;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: center;
+    text-decoration: none;
+    text-underline-offset: 2px;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff;
     white-space: nowrap;
+  }
+  .lecture-note::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url("img/note_eel.webp") center / 100% 100% no-repeat;
+    opacity: 0.65;
+    pointer-events: none;
+  }
+  .lecture-note:visited {
+    color: #0e3dcc;
+    text-decoration: none;
+  }
+  .lecture-note:hover,
+  .lecture-note:focus,
+  .lecture-note:visited:hover,
+  .lecture-note:visited:focus {
+    color: #353296;
+    text-decoration: underline;
   }
 </style>
 
 <div class='row'>
   <a class="anchor" id="schedule"></a>
   <h2>Schedule</h2>
-  <p> <b>Lecture videos can be found in the bCourses Media Gallery page</a></b></p>
+  <p class="schedule-lede"><em>Lecture videos can be found in the bCourses Media Gallery page</em></p>
 <!--   <p> <b> Note: </b> The password for Zoom cloud recordings for the single remote discussion will be <b><span style="display:inline" id="p2">eecs16a!</span></b> <input type="button" style="background-color: #dceef5; border-radius:20px" value="copy cloud-recording password!" onclick = "copyToClipboard('#p2')">. </p> -->
-  <p> (Please scroll horizontally if you're viewing this on your phone.) </p>
 <!--  <p> For the (optional) Practice Sets, see <a href="#practiceSets">here</a>. </p>-->
   <div class="table-responsive">
     <table border="3", class="table table-bordered table-striped-sched table-hover-sched" role="presentation">
       <thead>
         <tr>
-          <th style="background: #91c8d9", class='col-md-1 center'><b>Week</b></th>
-          <th style="background: #91c8d9", class='col-md-1 center'><b>Date</b></th>
-          <th style="background: #91c8d9", class='col-md-4 center'><b>Lecture Topic</b></th>
-          <th style="background: #91c8d9", class='col-md-2 center'><b>Discussion</b></th>
-          <th style="background: #91c8d9", class='col-md-2 center'><b>Lab</b></th>
-          <th style="background: #91c8d9", class='col-md-2 center'><b>Homework</b></th>
+          <th style="background: #6B96A8", class='col-md-1 center'><b>Week</b></th>
+          <th style="background: #6B96A8", class='col-md-1 center'><b>Lecture</b></th>
+          <th style="background: #6B96A8", class='col-md-4 center'><b>Topic</b></th>
+          <th style="background: #6B96A8", class='col-md-2 center'><b>Discussion</b></th>
+          <th style="background: #6B96A8", class='col-md-2 center'><b>Lab</b></th>
+          <th style="background: #6B96A8", class='col-md-2 center'><b>Homework</b></th>
         </tr>
       </thead>
       <tbody>
@@ -488,12 +494,13 @@ function showFontChange(f, prev) {
           <td>
             Vectors & Signals
                 <div class="lecture-notes">
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Notei.pdf">Note i</a></div>
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note1.pdf">Note 1</a></div>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Notei.pdf">Note i</a>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Note1.pdf">Note 1</a>
                 </div>
           </td>
           <td class="center">
                 0B
+                <br/><i>08/27</i>
               <br/>
 
               <br/>
@@ -548,11 +555,12 @@ function showFontChange(f, prev) {
           <td>
             Vector Spaces & Norms
                 <div class="lecture-notes">
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note1.pdf">Note 1</a></div>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Note1.pdf">Note 1</a>
                 </div>
           </td>
           <td class="center">
                 1A
+                <br/><i>09/01</i>
               <br/>
 
               <br/>
@@ -600,11 +608,12 @@ function showFontChange(f, prev) {
           <td>
 
                 <div class="lecture-notes">
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note2.pdf">Note 2</a></div>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Note2.pdf">Note 2</a>
                 </div>
           </td>
           <td class="center">
                 1B
+                <br/><i>09/03</i>
               <br/>
 
               <br/>
@@ -635,12 +644,13 @@ function showFontChange(f, prev) {
           <td>
 
                 <div class="lecture-notes">
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note2.pdf">Note 2</a></div>
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note3.pdf">Note 3</a></div>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Note2.pdf">Note 2</a>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Note3.pdf">Note 3</a>
                 </div>
           </td>
           <td class="center">
                 2A
+                <br/><i>09/08</i>
               <br/>
 
               <br/>
@@ -690,11 +700,12 @@ function showFontChange(f, prev) {
           <td>
 
                 <div class="lecture-notes">
-                  <div class="lecture-note"><a rel="noopener noreferrer" target="_blank" href = "lecture/Note3.pdf">Note 3</a></div>
+                  <a class="lecture-note" rel="noopener noreferrer" target="_blank" href="lecture/Note3.pdf">Note 3</a>
                 </div>
           </td>
           <td class="center">
                 2B
+                <br/><i>09/10</i>
               <br/>
 
               <br/>
@@ -729,6 +740,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 3A
+                <br/><i>09/15</i>
               <br/>
 
               <br/>
@@ -752,6 +764,7 @@ function showFontChange(f, prev) {
           <!-- This section pertains to homeworks -->
           <td rowspan="2" class="center">
                 Homework 3<br/>
+                  <i>(Due Never)</i><br/>
             <br>
 
             <a rel="noopener noreferrer" target="_blank" href="homework/hw3.pdf">Problems</a> <br>
@@ -777,6 +790,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 3B
+                <br/><i>09/17</i>
               <br/>
 
               <br/>
@@ -809,6 +823,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 4A
+                <br/><i>09/22</i>
               <br/>
 
               <br/>
@@ -853,6 +868,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 4B
+                <br/><i>09/24</i>
               <br/>
 
               <br/>
@@ -883,6 +899,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 5A
+                <br/><i>09/29</i>
               <br/>
 
               <br/>
@@ -925,6 +942,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 5B
+                <br/><i>10/01</i>
               <br/>
 
               <br/>
@@ -955,6 +973,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 6A
+                <br/><i>10/06</i>
               <br/>
 
               <br/>
@@ -997,6 +1016,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 6B
+                <br/><i>10/08</i>
               <br/>
 
               <br/>
@@ -1027,6 +1047,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 7A
+                <br/><i>10/13</i>
               <br/>
 
               <br/>
@@ -1069,6 +1090,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 7B
+                <br/><i>10/15</i>
               <br/>
 
               <br/>
@@ -1101,6 +1123,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 8A
+                <br/><i>10/20</i>
               <br/>
 
               <br/>
@@ -1143,6 +1166,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 8B
+                <br/><i>10/22</i>
               <br/>
 
               <br/>
@@ -1173,6 +1197,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 9A
+                <br/><i>10/27</i>
               <br/>
 
               <br/>
@@ -1215,6 +1240,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 9B
+                <br/><i>10/29</i>
               <br/>
 
               <br/>
@@ -1245,6 +1271,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 10A
+                <br/><i>11/03</i>
               <br/>
 
               <br/>
@@ -1287,6 +1314,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 10B
+                <br/><i>11/05</i>
               <br/>
 
               <br/>
@@ -1317,6 +1345,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 11A
+                <br/><i>11/10</i>
               <br/>
 
               <br/>
@@ -1364,6 +1393,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 12A
+                <br/><i>11/17</i>
               <br/>
 
               <br/>
@@ -1406,6 +1436,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 12B
+                <br/><i>11/19</i>
               <br/>
 
               <br/>
@@ -1436,6 +1467,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 13A
+                <br/><i>11/24</i>
               <br/>
 
               <br/>
@@ -1483,6 +1515,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 14A
+                <br/><i>12/01</i>
               <br/>
 
               <br/>
@@ -1525,6 +1558,7 @@ function showFontChange(f, prev) {
           </td>
           <td class="center">
                 14B
+                <br/><i>12/03</i>
               <br/>
 
               <br/>
@@ -1566,14 +1600,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var curr_dd = String(currDate).slice(3, 5)
     var curr_mm = String(currDate).slice(0, 2); //January is 0!
 
-    currDate = curr_mm + '/' + curr_dd + '/2022';
+    currDate = curr_mm + '/' + curr_dd + '/' + yyyy;
 
     if (currDate < today) {
-      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#daede0";
+      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#C9D6BC";
     } else if (currDate === today) {
-      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#f5f5e6";
+      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#E8EFF2";
     } else {
-      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#ede3df";
+      document.getElementById("date-hl".concat(j.toString())).style.backgroundColor = "#E4D9A8";
     }
   }
 
@@ -1582,19 +1616,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </div>
 
-<div class="row">
-  <a class="anchor" id="notes"></a>
-  <h2>Notes</h2>
- <!-- Grey notes are *still relevant material* for the course! They simply have not yet been covered in lecture. Blue notes have been covered in lecture. Notes with an [updated] tag to their left have been changed since last semester's iteration. Be aware that the un-updated notes are subject to change. -->
-
-  <div class="note-list">
-    <ul>
-    </ul>
-  </div>
-</div>
 <div class='row'>
   <a class="anchor" id="google-calendar"></a>
-  <h2>Calendars</h2>
+  <h2>Calendar</h2>
   <!-- <h3 style="color: red;">All office hours and HW Parties will be held in Soda 410.</h3> -->
   <!-- Homework party is held in the Wozniak Lounge and in-person office hours are held in Cory 144MA. The queue for office hours is at <a href="https://oh.eecs16a.org">oh.eecs16a.org -->
   <div class="scrollable">
@@ -1633,7 +1657,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <table align="left" border="1" class="table table-bordered table-striped-disc-cal" style="width: 99%;" role="presentation">
               <thead>
                   <tr>
-                      <td style="background-color: #91c8d9;" class="center" border="5" colspan="5">
+                      <td style="background-color: #6B96A8;" class="center" border="5" colspan="5">
                           <b>Discussion Schedule</b>
                       </td>
                   </tr>
@@ -1752,10 +1776,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 50%;">
       <thead>
         <tr>
-          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Semester</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Midterm 1</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Midterm 2</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Final/Midterm 3</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-1 center'>Semester</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-2 center'>Midterm 1</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-2 center'>Midterm 2</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-2 center'>Final/Midterm 3</th>
         </tr>
       </thead>
       <tbody>
@@ -2345,10 +2369,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 100%;">
       <thead>
         <tr>
-          <th style="background: #91c8d9" scope="col" class='col-md-1 center'> Semester </th>
-          <th style="background: #91c8d9" scope="col" class='col-md-4 center'> Module 1 </th>
-          <th style="background: #91c8d9" scope="col" class='col-md-4 center'> Module 2 </th>
-          <th style="background: #91c8d9" scope="col" class='col-md-4 center'> Module 3 </th>
+          <th style="background: #6B96A8" scope="col" class='col-md-1 center'> Semester </th>
+          <th style="background: #6B96A8" scope="col" class='col-md-4 center'> Module 1 </th>
+          <th style="background: #6B96A8" scope="col" class='col-md-4 center'> Module 2 </th>
+          <th style="background: #6B96A8" scope="col" class='col-md-4 center'> Module 3 </th>
         </tr>
       </thead>
       <tbody>
@@ -2399,9 +2423,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 60%;">
       <thead>
         <tr>
-          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Module 1</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Module 2</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Module 3</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-1 center'>Module 1</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-1 center'>Module 2</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-1 center'>Module 3</th>
         </tr>
       </thead>
       <tbody>
@@ -2462,10 +2486,10 @@ document.addEventListener('DOMContentLoaded', function() {
     <table border="3" class="table table-bordered table-condensed table-striped table-hover" style="width: 70%;">
       <thead>
         <tr>
-          <th style="background: #91c8d9" scope="col" class='col-md-1 center'>Week Number</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-7 center'>Topics</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Worksheets</th>
-          <th style="background: #91c8d9" scope="col" class='col-md-2 center'>Solutions</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-1 center'>Week Number</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-7 center'>Topics</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-2 center'>Worksheets</th>
+          <th style="background: #6B96A8" scope="col" class='col-md-2 center'>Solutions</th>
         </tr>
       </thead>
       <tbody>
@@ -2633,7 +2657,7 @@ document.addEventListener('DOMContentLoaded', function() {
   font-family: Raleway;
   cursor: pointer;
   background: transparent;
-  border: 1px solid #91C9FF;
+  border: 1px solid #8AAFBF;
   outline: none;
   transition: 0.3s ease-in-out;
   border-radius:50px 50px 50px 50px;
@@ -2641,14 +2665,14 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .gsicollapsible.active {
-  background: #7876d061;
+  background: rgba(107, 150, 168, 0.38);
   border: 1px solid #ff91cb;
   border-radius:50px 50px 50px 50px;
 }
 
 .gsicollapsible:hover {
   transition: 0.3s ease-in-out;
-  background: #7876d061;
+  background: rgba(107, 150, 168, 0.38);
   border-radius:50px 50px 50px 50px;
 }
 
@@ -2657,7 +2681,7 @@ document.addEventListener('DOMContentLoaded', function() {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: rgba(145, 200, 217,0.2);
+  background-color: rgba(107, 150, 168, 0.18);
 
 }
 </style>
@@ -2726,7 +2750,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     <b>Ryan Black</b><br/>
     Content TA<br/>
-    <small>  </small> <br/>
+    <small> he/him/his </small> <br/>
     rblack06@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
@@ -2770,7 +2794,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     <b>Kerry Pan</b><br/>
     Lab TA<br/>
-    <small>  </small> <br/>
+    <small> he/him/his </small> <br/>
     kerrypan25@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
@@ -2781,7 +2805,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     <b>Jonathan Loy</b><br/>
     Lab TA<br/>
-    <small>  </small> <br/>
+    <small> he/him/his </small> <br/>
     jonathanloy@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
@@ -2792,11 +2816,11 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     <b>Prarthan Ghosh</b><br/>
     Tutor<br/>
-    <small>  </small> <br/>
+    <small> he/him/his </small> <br/>
     prarthan_ghosh@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
-      <img class='headshot img-circle' src='img/doge.jpg'/>
+        <img class='headshot img-circle' src='photos-gsi/NicholasKong.jpg' onmouseover="this.src='photos-gsi/fun/NicholasKongSilly.jpg'" onmouseout="this.src='photos-gsi/NicholasKong.jpg'" id="gsi10" data-toggle="modal" data-target="#modal_gsi10"/>
       <button type="button" class="gsicollapsible">Click to Toggle Bio!</button>
       <div class="gsicontent">
         <p><small>Hi! I&#x27;m a third-year studying EECS. I&#x27;m interested in power systems modeling, optimization, and pretty much everything about the electric grid. I love going on long bike rides, trail running, reading, and cooking. Always down to chat!</small></p>
@@ -2807,7 +2831,7 @@ document.addEventListener('DOMContentLoaded', function() {
     kong_nicholas@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
-      <img class='headshot img-circle' src='img/doge.jpg'/>
+        <img class='headshot img-circle' src='photos-gsi/AdityaAnantaraman.jpg' onmouseover="this.src='photos-gsi/fun/AdityaAnantaramanSilly.jpg'" onmouseout="this.src='photos-gsi/AdityaAnantaraman.jpg'" id="gsi11" data-toggle="modal" data-target="#modal_gsi11"/>
       <button type="button" class="gsicollapsible">Click to Toggle Bio!</button>
       <div class="gsicontent">
         <p><small>Hi! I&#x27;m an EECS junior interested in theoretical and computational neuroscience, especially auditory and visual perception and emergent intelligence. I do research on birdsong and vocal communication, and EE 66 concepts pop up every day! I like making music, DJing, playing video games, watching movies, taking photos, and playing volleyball!!</small></p>
@@ -2851,7 +2875,7 @@ document.addEventListener('DOMContentLoaded', function() {
     daniel_lief@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
-      <img class='headshot img-circle' src='img/doge.jpg'/>
+        <img class='headshot img-circle' src='photos-gsi/DeepthiKonakanchi.jpg' onmouseover="this.src='photos-gsi/fun/DeepthiKonakanchisilly.jpg'" onmouseout="this.src='photos-gsi/DeepthiKonakanchi.jpg'" id="gsi15" data-toggle="modal" data-target="#modal_gsi15"/>
       <button type="button" class="gsicollapsible">Click to Toggle Bio!</button>
       <div class="gsicontent">
         <p><small>Hey everyone! I&#x27;m Deepthi, a sophomore studying EECS, and this is my first time tutoring EE 66! I enjoy exploring the intersection between engineering and healthcare, and I find signal processing useful for it! I&#x27;m a tutor for CS 10 as well, and outside of teaching, I love reading, drawing, skateboarding, and trying new food. I also enjoy collecting vinyls, so if anyone has music or restaurant recommendations, let me know! Looking forward to the semester!</small></p>
@@ -2869,11 +2893,11 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
     <b>Amin Mobedi</b><br/>
     Lab Staff<br/>
-    <small>  </small> <br/>
+    <small> he/him/his </small> <br/>
     amin.mobedi@
     </div>
       <div class='col-md-3 center col-sm-4 col-xs-6 bottomspace'>
-      <img class='headshot img-circle' src='img/doge.jpg'/>
+        <img class='headshot img-circle' src='photos-gsi/TheoDelaCruz.jpg' onmouseover="this.src='photos-gsi/fun/TheoDelaCruzsilly.jpg'" onmouseout="this.src='photos-gsi/TheoDelaCruz.jpg'" id="gsi17" data-toggle="modal" data-target="#modal_gsi17"/>
       <button type="button" class="gsicollapsible">Click to Toggle Bio!</button>
       <div class="gsicontent">
         <p><small>Hi! I&#x27;m a sophomore studying EECS, and this is my first semester on staff. My interests are still developing, but currently I&#x27;m interested in signal processing and machine learning. I enjoy rock climbing, cubing, playing video games, and watching video essays. Looking forward to this semester!</small></p>
@@ -2943,58 +2967,6 @@ for (i = 0; i < coll.length; i++) {
       A3: EECS 16A is designed to be taken without any prerequisites, so there is no need to take MATH 54 before EECS 16A. EECS 16AB teaches linear algebra with the intent of preparing you for courses like EECS 127 (Optimization) and EECS 189 (Machine Learning) and provides engineering and machine learning examples and applications for linear algebra. EECS 16AB also uses Jupyter notebooks and python so you can better connect linear algebra and computation.
     </p>
 </div> -->
-<!--<h2>Aesthetics and Feedback</h2>-->
-<h2>Feedback</h2>
-<a class="anchor" id="aesthetics"></a>
-
-<!--<p class="add-bottom-margin"> You can optionally toggle between the 16 Series legacy font (Roboto) and the default font (Raleway) for this website. If you have other suggestions for this website, feel free to let the software TAs know <a rel="noopener noreferrer" target="_blank" href="mailto:austinpatel@berkeley.edu">here.</a>-->
-<!--<div class="center">-->
-<!--	<input type="button" style="background-color: #dceef5; border-radius:20px" value="Toggle Font: Roboto" onclick = "fontChange('Roboto')">-->
-<!--	<input type="button" style="background-color: #dceef5; border-radius:20px" value="Toggle Font: Raleway (Default)" onclick = "fontChange('Raleway')">-->
-<!--</div>-->
-<p>If you have suggestions for this website or see problems, feel free to let the software TAs know <a rel="noopener noreferrer" target="_blank" href="mailto:ee66@berkeley.edu">here.</a></p>
-<br>
-<br>
-<br>
-
-<script>
-function fontChange(f) {
-	if (typeof(Storage) !== "undefined") {
-    var prev = localStorage.getItem("fontFamily");
-	  localStorage.setItem("fontFamily", f);
-	  document.body.style.fontFamily = localStorage.getItem("fontFamily");
-    showFontChange(f, prev);
-	}
-}
-
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-
-  showCopied();
-}
-
-function showCopied() {
-  var x = document.getElementById("snackbar1");
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-
-function showFontChange(f, prev) {
-  var x = document.getElementById("snackbar2");
-  if (prev == f) {
-    x.innerHTML = "site font is already ".concat(prev).concat("!");
-  }
-  else {
-    x.innerHTML = "changed site font to: ".concat(f).concat("!");
-  }
-  x.className = "show";
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-</script>
     </div>
   </div>
 
