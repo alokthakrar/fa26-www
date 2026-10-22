@@ -1830,6 +1830,99 @@ document.addEventListener('DOMContentLoaded', function() {
     <li><a target="_blank" href="https://www.databookuw.com/">Data-Driven Science and Engineering Book</a> </li>
   </ul>
 </div>
+<style>
+  /* Collapsible exam walkthrough lists. Native <details> -- no JS needed. */
+  .walkthrough {
+    max-width: 50%;
+    margin-bottom: 6px;
+    border: 1px solid #6B96A8;
+    border-radius: 4px;
+    background-color: rgba(107, 150, 168, 0.08);
+  }
+
+  .walkthrough > summary {
+    padding: 7px 12px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  /* The site stylesheet suppresses the native disclosure triangle, so supply
+     an explicit caret -- otherwise nothing signals that these expand. */
+  .walkthrough > summary {
+    list-style: none;
+  }
+
+  .walkthrough > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .walkthrough > summary::before {
+    content: "\25B8";
+    display: inline-block;
+    width: 1em;
+    color: #6B96A8;
+  }
+
+  .walkthrough[open] > summary::before {
+    content: "\25BE";
+  }
+
+  .walkthrough > summary:hover {
+    background-color: rgba(107, 150, 168, 0.18);
+  }
+
+  .walkthrough[open] > summary {
+    border-bottom: 1px solid #6B96A8;
+  }
+
+  .walkthrough-body {
+    padding: 8px 12px 10px 12px;
+    margin: 0;
+  }
+
+  .walkthrough-body ul {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .walkthrough-empty {
+    margin: 0;
+    font-style: italic;
+  }
+
+  @media (max-width: 767px) {
+    .walkthrough { max-width: 100%; }
+  }
+</style>
+
+<div class="row">
+  <a class="anchor" id="examWalkthroughs"></a>
+  <h2>Exam Walkthroughs</h2>
+  Staff walkthroughs of past exams, grouped by exam. Expand an exam to see what is available.
+  <br>
+  <br>
+  <details class="walkthrough">
+    <summary>Exam 1</summary>
+    <div class="walkthrough-body">
+      <p class="walkthrough-empty">No walkthroughs posted yet.</p>
+    </div>
+  </details>
+  <details class="walkthrough">
+    <summary>Exam 2</summary>
+    <div class="walkthrough-body">
+      <ul>
+        <li><a rel="noopener noreferrer" target="_blank" href="https://drive.google.com/drive/folders/1FvIZK8BKbvBdw1qOthEPAgD6p5sxsMQd">Spring 2026 Exam 2 Walkthrough</a></li>
+      </ul>
+    </div>
+  </details>
+  <details class="walkthrough">
+    <summary>Exam 3</summary>
+    <div class="walkthrough-body">
+      <p class="walkthrough-empty">No walkthroughs posted yet.</p>
+    </div>
+  </details>
+  <br>
+</div>
 <div class="row">
   <a class="anchor" id="exams"></a>
   <h2>Past Exams</h2>
